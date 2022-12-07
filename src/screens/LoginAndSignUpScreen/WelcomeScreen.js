@@ -2,11 +2,43 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import logo from '../../../assets/logo1.png'
 import { colors, hr80 } from '../../globals/style'
+import { firebase } from '../../../firebase/firebaseConfig'
 
 const WelcomeScreen = ({ navigation }) => {
+  const [userlogged, setUserlogged] = useState(null)
+  useEffect(() => {
+    const checklogin = () => {
+      firebase.auth().onAuthStateChanged((user) => {
+        // console.log(user);
+        if (user) {
+          // navigation.navigate('home');
+          setUserlogged(user)
+        } else {
+          // No user is signed in.
+          console.log('no user')
+        }
+      })
+    }
+    checklogin()
+  }, [])
+
+  const handlelogout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        // Sign-out successful.
+        setUserlogged(null)
+        console.log('signed out')
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error)
+      })
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to EatNow</Text>
+      <Text style={styles.title}>Welcome to Foodie</Text>
       <View style={styles.logoout}>
         <Image source={logo} style={styles.logo} />
       </View>
@@ -16,29 +48,30 @@ const WelcomeScreen = ({ navigation }) => {
       </Text>
       <View style={hr80} />
 
-      <View style={styles.btnout}>
-        <TouchableOpacity onPress={() => navigation.navigate('signup')}>
-          <Text style={styles.btn}>Sign up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('login')}>
-          <Text style={styles.btn}>Log In</Text>
-        </TouchableOpacity>
-      </View>
-      {/* ) : (
+      {userlogged === null ? (
+        <View style={styles.btnout}>
+          <TouchableOpacity onPress={() => navigation.navigate('signup')}>
+            <Text style={styles.btn}>Sign up</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('login')}>
+            <Text style={styles.btn}>Log In</Text>
+          </TouchableOpacity>
+        </View>
+      ) : (
         <View style={styles.logged}>
-          {/* <Text style={styles.txtlog}>
+          <Text style={styles.txtlog}>
             Signed in as <Text style={styles.txtlogin}>{userlogged.email}</Text>
-          </Text> */}
-      {/* <View style={styles.btnout}>
-            <TouchableOpacity >
+          </Text>
+          <View style={styles.btnout}>
+            <TouchableOpacity onPress={() => navigation.navigate('home')}>
               <Text style={styles.btn}>Next</Text>
             </TouchableOpacity>
-            <TouchableOpacity >
+            <TouchableOpacity onPress={() => handlelogout()}>
               <Text style={styles.btn}>Log Out</Text>
             </TouchableOpacity>
           </View>
         </View>
-      )}  */}
+      )}
     </View>
   )
 }
@@ -104,5 +137,4 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
 })
-
 export default WelcomeScreen
