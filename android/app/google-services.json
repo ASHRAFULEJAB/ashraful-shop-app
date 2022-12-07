@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952690495710",
+    "project_id": "eat-now-admin",
+    "storage_bucket": "eat-now-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952690495710:android:1f61cfafd19457acb1b24f",
+        "android_client_info": {
+          "package_name": "com.anonymous.eatnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952690495710-c7od0vqb1j9k1ud3mlmer5cfoodt50ub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6SZCkue4Rsk66JsoJAWUg_EdkIAqJ5jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952690495710-c7od0vqb1j9k1ud3mlmer5cfoodt50ub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
