@@ -8,6 +8,8 @@ import WelcomeScreen from './src/screens/LoginAndSignUpScreen/WelcomeScreen'
 import SignupScreen from './src/screens/LoginAndSignUpScreen/SignUpScreen'
 import LoginScreen from './src/screens/LoginAndSignUpScreen/LoginScreen'
 import HomeScreen from './src/screens/LoginAndSignUpScreen/HomeScreen'
+import Userprofile from './src/screens/Userprofile'
+import Productpage from './src/screens/Productpage'
 
 // import Userprofile from './src/screens/Userprofile';
 // import Productpage from './src/screens/Productpage';
@@ -50,17 +52,17 @@ export default function App() {
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen name="userprofile" component={Userprofile}
+        <Stack.Screen name="userprofile" component={Userprofile}
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
 
-        {/* <Stack.Screen name="productpage" component={Productpage}
+        <Stack.Screen name="productpage" component={Productpage}
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
         {/* 
         <Stack.Screen name="cart" component={UserCart}
           options={{

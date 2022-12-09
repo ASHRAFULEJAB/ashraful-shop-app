@@ -6,6 +6,7 @@ import { firebase } from '../../../firebase/firebaseConfig'
 
 const WelcomeScreen = ({ navigation }) => {
   const [userlogged, setUserlogged] = useState(null)
+  
   useEffect(() => {
     const checklogin = () => {
       firebase.auth().onAuthStateChanged((user) => {
@@ -64,7 +65,7 @@ const WelcomeScreen = ({ navigation }) => {
           </Text>
           <View style={styles.btnout}>
             <TouchableOpacity onPress={() => navigation.navigate('home')}>
-              <Text style={styles.btn}>Next</Text>
+              <Text style={styles.btn}>Go To Home</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => handlelogout()}>
               <Text style={styles.btn}>Log Out</Text>

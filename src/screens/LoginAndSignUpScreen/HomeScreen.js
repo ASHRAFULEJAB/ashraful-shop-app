@@ -21,6 +21,7 @@ import OfferSlider from '../../components/OffSlider'
 
 import { firebase } from '../../../firebase/firebaseConfig'
 import Cardslider from '../../components/Cardslider'
+import BottomNav from '../../components/BottomNav'
 // import Cardslider from '../components/Cardslider'
 // import BottomNav from '../components/BottomNav'
 // import { windowHeight } from '../components/BottomNav'
@@ -54,11 +55,11 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <StatusBar />
 
-      <HomeHeadNav />
+      <HomeHeadNav navigation={navigation} />
 
-      {/* <View style={styles.bottomnav}>
-        <BottomNav  />
-      </View> */}
+      <View style={styles.bottomnav}>
+        <BottomNav/>
+      </View>
 
       <ScrollView>
         <View style={styles.searchbox}>
@@ -106,17 +107,17 @@ const HomeScreen = ({ navigation }) => {
         <Cardslider
           title={"Today's Special"}
           data={foodData}
-          // navigation={navigation}
+          navigation={navigation}
         />
         <Cardslider
           title={'Non-Veg'}
           data={NonVegData}
-          // navigation={navigation}
+          navigation={navigation}
         />
         <Cardslider
           title={'Veg'}
           data={VegData}
-          // navigation={navigation}
+          navigation={navigation}
         />
       </ScrollView>
     </View>
