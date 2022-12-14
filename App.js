@@ -10,6 +10,9 @@ import LoginScreen from './src/screens/LoginAndSignUpScreen/LoginScreen'
 import HomeScreen from './src/screens/LoginAndSignUpScreen/HomeScreen'
 import Userprofile from './src/screens/Userprofile'
 import Productpage from './src/screens/Productpage'
+import UserCart from './src/screens/UserCart'
+import Placeorder from './src/screens/Placeorder'
+import TrackOrders from './src/screens/TrackOrder'
 
 // import Userprofile from './src/screens/Userprofile';
 // import Productpage from './src/screens/Productpage';
@@ -63,24 +66,24 @@ export default function App() {
             headerShown: false,
           }}
         />
-        {/* 
+        
         <Stack.Screen name="cart" component={UserCart}
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
 
-        {/* <Stack.Screen name="placeorder" component={Placeorder}
+        <Stack.Screen name="placeorder" component={Placeorder}
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
 
-        {/* <Stack.Screen name="trackorders" component={TrackOrders}
+        <Stack.Screen name="trackorders" component={TrackOrders}
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

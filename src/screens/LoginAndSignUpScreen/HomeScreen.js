@@ -58,7 +58,7 @@ const HomeScreen = ({ navigation }) => {
       <HomeHeadNav navigation={navigation} />
 
       <View style={styles.bottomnav}>
-        <BottomNav/>
+        <BottomNav navigation={navigation}/>
       </View>
 
       <ScrollView>

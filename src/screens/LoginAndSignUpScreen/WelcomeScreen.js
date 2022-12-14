@@ -39,7 +39,7 @@ const WelcomeScreen = ({ navigation }) => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Foodie</Text>
+      <Text style={styles.title}>Welcome to Eat Now</Text>
       <View style={styles.logoout}>
         <Image source={logo} style={styles.logo} />
       </View>
