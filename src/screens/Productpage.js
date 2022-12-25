@@ -29,7 +29,7 @@ const Productpage = ({ navigation, route }) => {
   const data = route.params
   const [ischecked, setischecked] = useState(false)
   const [quantity, setquantity] = useState('1')
-  const [addonquantity, setaddonquantity] = useState('0')
+  const [addonquantity, setaddonquantity] = useState('1')
   // console.log(data);
   if (route.params === undefined) {
     navigation.navigate('home')
@@ -63,6 +63,23 @@ const Productpage = ({ navigation, route }) => {
   const increaseQuantity = () => {
     setquantity((parseInt(quantity) + 1).toString())
   }
+  // if (quantity > 3) {
+  //   <Text disabled onPress={() => increaseQuantity()} style={incdecbtn}>
+  //   +
+  // </Text>
+  //   diasbled={true}
+  // alert('You cannot add more than 3')
+  // return (
+  //   <View>
+  //     <Text>Stock Out</Text>
+  //     <TouchableOpacity onPress={() => navigation.navigate('productpage')}>
+  //       <View style={navbtn}>
+  //         <AntDesign name='back' size={24} color='black' style={navbtnin} />
+  //       </View>
+  //     </TouchableOpacity>
+  //   </View>
+  // )
+  // }
   const decreaseQuantity = () => {
     if (parseInt(quantity) > 1) {
       setquantity((parseInt(quantity) - 1).toString())
@@ -142,7 +159,9 @@ const Productpage = ({ navigation, route }) => {
               <Text style={styles.txt3}>Add Extra </Text>
               <View style={styles.c3in}>
                 <Text style={styles.text4}>{data.foodAddon}</Text>
-                <Text style={styles.text4}>৳{parseInt(data.foodAddonPrice)}/-</Text>
+                <Text style={styles.text4}>
+                  ৳{parseInt(data.foodAddonPrice)}/-
+                </Text>
               </View>
 
               <View style={incdecout}>
@@ -163,9 +182,19 @@ const Productpage = ({ navigation, route }) => {
 
             <Text style={styles.txt3}>Food Quantity</Text>
             <View style={incdecout}>
-              <Text onPress={() => increaseQuantity()} style={incdecbtn}>
-                +
-              </Text>
+              {quantity > 3 ? (
+                <Text
+                  disabled
+                  onPress={() => increaseQuantity()}
+                  style={incdecbtn}
+                >
+                  +
+                </Text>
+              ) : (
+                <Text onPress={() => increaseQuantity()} style={incdecbtn}>
+                  +
+                </Text>
+              )}
               <TextInput value={quantity} style={incdecinput} />
               <Text onPress={() => decreaseQuantity()} style={incdecbtn}>
                 -

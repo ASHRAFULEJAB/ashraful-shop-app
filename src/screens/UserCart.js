@@ -140,11 +140,19 @@ const UserCart = ({ navigation }) => {
           <TouchableOpacity style={btn2}>
             <Text
               style={styles.btntxt}
+              onPress={() => navigation.navigate('payment', { cartdata })}
+            >
+              Payment
+            </Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity style={btn2}>
+            <Text
+              style={styles.btntxt}
               onPress={() => navigation.navigate('placeorder', { cartdata })}
             >
               Place Order
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
     </View>

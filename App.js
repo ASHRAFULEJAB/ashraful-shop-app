@@ -13,6 +13,7 @@ import Productpage from './src/screens/Productpage'
 import UserCart from './src/screens/UserCart'
 import Placeorder from './src/screens/Placeorder'
 import TrackOrders from './src/screens/TrackOrder'
+import Payment from './src/screens/Payment'
 
 // import Userprofile from './src/screens/Userprofile';
 // import Productpage from './src/screens/Productpage';
@@ -73,6 +74,11 @@ export default function App() {
           }}
         />
 
+        <Stack.Screen name="payment" component={Payment}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="placeorder" component={Placeorder}
           options={{
             headerShown: false,

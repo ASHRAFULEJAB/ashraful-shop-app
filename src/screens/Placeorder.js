@@ -189,7 +189,7 @@ const Placeorder = ({ navigation, route }) => {
 
                 <View >
                     <TouchableOpacity style={btn1}>
-                        <Text style={styles.btntext} onPress={() => placenow()}>Proceed to Payment</Text>
+                        <Text style={styles.btntext} onPress={() => placenow()}>Place Order</Text>
                     </TouchableOpacity>
                 </View>
             </View>
