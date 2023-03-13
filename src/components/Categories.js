@@ -18,7 +18,7 @@ const Categories = () => {
             color='black'
             style={styles.myicon}
           />
-          <Text style={styles.mytext}>Starters</Text>
+          <Text style={styles.mytext}>Shirt</Text>
         </View>
 
         <View style={styles.box}>
@@ -28,7 +28,7 @@ const Categories = () => {
             color='black'
             style={styles.myicon}
           />
-          <Text style={styles.mytext}>Dinner</Text>
+          <Text style={styles.mytext}>Pant</Text>
         </View>
 
         <View style={styles.box}>
@@ -38,7 +38,7 @@ const Categories = () => {
             color='black'
             style={styles.myicon}
           />
-          <Text style={styles.mytext}>Breakfast</Text>
+          <Text style={styles.mytext}>Shari</Text>
         </View>
 
         <View style={styles.box}>
@@ -48,7 +48,7 @@ const Categories = () => {
             color='black'
             style={styles.myicon}
           />
-          <Text style={styles.mytext}>Deserts</Text>
+          <Text style={styles.mytext}>Lehenga</Text>
         </View>
       </ScrollView>
     </View>

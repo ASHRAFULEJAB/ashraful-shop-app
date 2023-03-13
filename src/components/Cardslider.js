@@ -52,6 +52,7 @@ export default Cardslider
 const styles = StyleSheet.create({
     container: {
         marginVertical: 10,
+       
     },
     //card
     cardouthead: {
@@ -70,7 +71,8 @@ const styles = StyleSheet.create({
         // backgroundColor: "aqua",
         width: 300,
         height: 300,
-        margin: 10,
+        marginVertical: 40,
+        marginHorizontal:20,
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#e8e8e8',
@@ -107,7 +109,7 @@ const styles = StyleSheet.create({
     s3: {
         alignItems: 'center',
         position: 'absolute',
-        bottom: 1,
+        bottom: 16,
         width: '100%',
     },
     buybtn: {
@@ -119,5 +121,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         width: '90%',
         textAlign: 'center',
+        // marginBottom:40,
+        // marginVertical:40
     }
 })

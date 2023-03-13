@@ -128,16 +128,16 @@ const Productpage = ({ navigation, route }) => {
             <Text style={styles.head2}>৳{data.foodPrice}/-</Text>
           </View>
           <View style={styles.s3}>
-            <Text style={styles.head3}>About Food</Text>
+            <Text style={styles.head3}>About Products</Text>
             <Text style={styles.head4}>{data.foodDescription}</Text>
-            <View style={styles.s3in}>
+            {/* <View style={styles.s3in}>
               {data.foodType == 'veg' ? (
                 <Text style={veg}></Text>
               ) : (
                 <Text style={nonveg}></Text>
               )}
               <Text style={styles.head5}>{data.foodType}</Text>
-            </View>
+            </View> */}
           </View>
 
           <View style={styles.container2}>

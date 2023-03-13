@@ -110,12 +110,12 @@ const HomeScreen = ({ navigation }) => {
           navigation={navigation}
         />
         <Cardslider
-          title={'Non-Veg'}
+          title={'Pant'}
           data={NonVegData}
           navigation={navigation}
         />
         <Cardslider
-          title={'Veg'}
+          title={'Shirt'}
           data={VegData}
           navigation={navigation}
         />

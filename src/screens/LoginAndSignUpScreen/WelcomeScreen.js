@@ -39,13 +39,13 @@ const WelcomeScreen = ({ navigation }) => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Eat Now</Text>
+      <Text style={styles.title}>Welcome to Ashraful Shop</Text>
       <View style={styles.logoout}>
         <Image source={logo} style={styles.logo} />
       </View>
       <View style={hr80} />
       <Text style={styles.text}>
-        Find the best food around you at lowest price.
+        Find the best Products around you at lowest price.
       </Text>
       <View style={hr80} />
 

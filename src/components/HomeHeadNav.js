@@ -15,7 +15,7 @@ const HomeHeadNav = ({ navigation }) => {
         style={styles.myicon}
       />
       <View style={styles.containerin}>
-        <Text style={styles.mytext}>EatNow</Text>
+        <Text style={styles.mytext}>Ashraful Shop</Text>
         <MaterialCommunityIcons
           name='food-outline'
           size={26}
